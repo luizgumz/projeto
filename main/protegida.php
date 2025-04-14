@@ -1,15 +1,13 @@
 <?php
     //Area administrativa
     session_start();
+    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
+
     if (!$_SESSION['logado']) {
         header("Location: login.php");
         exit;
-    } else {
-        header("Location: index.php");
     }
-
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
 ?>
 
 <!DOCTYPE html>

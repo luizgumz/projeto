@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($usuario === $usuario_admin['usuario'] && password_verify($senha, $usuario_admin['senha'])) {
         $_SESSION['logado'] = true;
-        header('Location: protegida.php');
+        header('Location: /projeto/main/protegida.php');
         exit;
     } else {
         header('Location: login.php?erro=1');
