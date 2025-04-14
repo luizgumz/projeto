@@ -9,12 +9,15 @@
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
 
+
         if ($usuario === $usuario_admin['usuario'] && password_verify($senha, $usuario_admin['senha'])) {
-            $_SESSION['logado'] = true;
+            $expiracao = time() + 3600; // 1 Hora
+            setcookie('logado', true, $expiracao, '/');
             header('Location: /projeto/main/protegida.php');
             exit;
         } else {
-            $erro = 'Usuário ou senha inválidos.';
+            $erro = 'Usuário ou senha inválidos. Tente novamente!';
+            exit;
         }
     }
 ?>
@@ -34,7 +37,7 @@
     <form method="POST" class="container mt-5">
         <h3>Login</h3>
         <?php if ($erro): ?>
-            <p class="text-danger"><?= $erro ?></p>
+            <p class="text-danger"><?= $erro ?></p> <!-- MUDAR DEPOIS NO CSS PARA VERMELHO -->
         <?php endif; ?>
         <div>
             <input name="usuario" class="form-control mb-2" placeholder="Usuário">
