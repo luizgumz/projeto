@@ -38,7 +38,7 @@
     background-color: #ffffff22;
     color: #ff66cc;
   }
-  
+
   .musical-notes {
     position: absolute;
     top: 0;
@@ -96,4 +96,16 @@ header a {
     position: relative;
     z-index: 1;
 }
+
+header img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+  ;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
 
