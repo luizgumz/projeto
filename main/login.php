@@ -11,7 +11,7 @@
 
         if ($usuario === $usuario_admin['usuario'] && password_verify($senha, $usuario_admin['senha'])) {
             $_SESSION['logado'] = true;
-            header('Location: index.php');
+            header('Location: /projeto/main/protegida.php');
             exit;
         } else {
             $erro = 'Usuário ou senha inválidos.';
