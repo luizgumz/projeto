@@ -3,6 +3,8 @@
     session_start();
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
 
+    $erro;
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
