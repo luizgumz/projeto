@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicas/<?php $item['titulo'] ?></title>
-    <link rel="stylesheet" href="/projeto/main/style_detalhes.css">
+    <link rel="stylesheet" href="/projeto/main/style_secundario.css">
     <link rel="stylesheet" href="/projeto/includes/header.css">
     <link rel="stylesheet" href="/projeto/includes/footer.css">
 </head>

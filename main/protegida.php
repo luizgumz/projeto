@@ -59,41 +59,41 @@
     <title>Musicas/Admin</title>
     <link rel="stylesheet" href="/projeto/includes/header.css">
     <link rel="stylesheet" href="/projeto/includes/footer.css">
+    <link rel="stylesheet" href="/projeto/main/style_secundario.css">
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
-    <div class="container mt-5">
-        <div>
-            <br>
-            <h3>Administração</h3>
-        </div>
+    <div class="container-mt-5">
+        
+        <br>
         <h2>Bem-vindo, <strong>Admin!</strong></h2>
 
-        <!-- Tomar cuido com Enctyme -->
         <form method="POST" action="protegida.php">
             <div>
                 <h3>Título</h3>
-                <input name="titulo" class="form-control mb-2" placeholder="Título" required>
+                <input name="titulo:" class="form-control mb-2" placeholder="Título" required>
             </div> 
             <div>
                 <h3>Autor</h3>   
-                <input name="autor" class="form-control mb-2" placeholder="Autor" required>
+                <input name="autor:" class="form-control mb-2" placeholder="Autor" required>
             </div>
             <div>
                 <h3>Categoria</h3>
-                <input name="categoria" class="form-control mb-2" placeholder="Categoria" required>
+                <input name="categoria:" class="form-control mb-2" placeholder="Categoria" required>
             </div>
             <div>
                 <h3>Idioma</h3>
-                <input name="idioma" class="form-control mb-2" placeholder="Idioma" required>
+                <input name="idioma:" class="form-control mb-2" placeholder="Idioma" required>
             </div>
             <div>
                 <h3>Descrição</h3>
-                <textarea name="descricao" class="form-control mb-2" placeholder="Descrição" required></textarea>
+                <textarea name="descricao:" class="form-control mb-2" placeholder="Descrição" required></textarea>
             </div>
             <div>
                 <h3>Imagem</h3>
-                <input type="text" name="url" class="form-control mb-2" required>
+                <h4><strong>Atenção!</strong></h4>
+                <h4>Deve-se colocar um link http para que a imagem funcione corretamente.</h4>
+                <input type="text" name="url" class="form-control mb-2" placeholder="Link" required>
             </div>
             <div>
                 <br>

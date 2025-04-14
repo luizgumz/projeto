@@ -19,12 +19,17 @@
     <title>Musicas/Filtro</title>
     <link rel="stylesheet" href="/projeto/includes/header.css">
     <link rel="stylesheet" href="/projeto/includes/footer.css">
+    <link rel="stylesheet" href="/projeto/main/style_secundario.css">
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
     <br> 
     <br>
-    <form method="GET" class="container mt-4">
+    <form method="GET" class="container-mt-5">
+        <div>
+            <h2>Filtre seus itens aqui:</h2>
+            <br>
+        </div>
         <div>
             <h3>Título</h3>
             <input type="text" name="titulo" placeholder="Título" class="form-control mb-2">
@@ -47,7 +52,7 @@
         </div>
     </form>
 
-    <div class="container mt-4">
+    <div class="container-mt-5">
         <br>
         <?php foreach ($filtro_musica as $item): ?>
             <div>
