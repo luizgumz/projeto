@@ -1,4 +1,11 @@
 <footer>
+    <div class="footer-notes">
+        <span>🎶</span>
+        <span>🎵</span>
+        <span>🎶</span>
+        <span>🎵</span>
+    </div>
+
     <p>© 2025 Lista Musical - Todos os direitos reservados</p>
     
     <div class="footer-links">
