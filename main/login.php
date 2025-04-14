@@ -3,7 +3,7 @@
     session_start();
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
 
-    $erro;
+    $erro = "Usuário ou senha inválidos. Tente novamente!";
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario = $_POST['usuario'];
