@@ -27,13 +27,34 @@
 
         <!-- Tomar cuido com Enctyme -->
         <form method="POST" action="criar_item.php" enctype="multipart/form-data">
-            <input name="titulo" class="form-control mb-2" placeholder="Título">
-            <input name="autor" class="form-control mb-2" placeholder="Autor">
-            <input name="categoria" class="form-control mb-2" placeholder="Categoria">
-            <input name="idioma" class="form-control mb-2" placeholder="Idioma">
-            <textarea name="descricao" class="form-control mb-2" placeholder="Descrição"></textarea>
-            <input type="file" name="imagem" class="form-control mb-2">
-            <button class="btn btn-success">Cadastrar</button>
+            <div>
+                <h3>Título</h3>
+                <input name="titulo" class="form-control mb-2" placeholder="Título">
+            </div> 
+            <div>
+                <h3>Autor</h3>   
+                <input name="autor" class="form-control mb-2" placeholder="Autor">
+            </div>
+            <div>
+                <h3>Categoria</h3>
+                <input name="categoria" class="form-control mb-2" placeholder="Categoria">
+            </div>
+            <div>
+                <h3>Idioma</h3>
+                <input name="idioma" class="form-control mb-2" placeholder="Idioma">
+            </div>
+            <div>
+                <h3>Descrição</h3>
+                <textarea name="descricao" class="form-control mb-2" placeholder="Descrição"></textarea>
+            </div>
+            <div>
+                <h3>Imagem</h3>
+                <input type="file" name="imagem" class="form-control mb-2">
+            </div>
+            <div>
+                <br>
+                <button class="btn btn-success">Cadastrar</button>
+            </div>
         </form>
         
     </div>
