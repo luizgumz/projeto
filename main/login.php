@@ -31,16 +31,21 @@
     <title>Musica/login</title>
     <link rel="stylesheet" href="/projeto/includes/header.css">
     <link rel="stylesheet" href="/projeto/includes/footer.css">
+    <link rel="stylesheet" href="/projeto/main/style_login.css">
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
-    <form action="/projeto/functions/valida_login.php" method="POST" class="container mt-5">
-        <h3>Login</h3>
+    <form action="/projeto/functions/valida_login.php" method="POST" class="container-mt-5">
+        
+        <br>
+        <h2>Faça login para acessar a área de administração</h2>
         
         <div>
+            <h2>Login:</h2>
             <input type="text" name="usuario" required placeholder="Usuário"><br>
         </div>
         <div>
+            <h2>Senha:</h2>
             <input type="password" name="senha" required placeholder="Senha"><br>
         </div>
         <div>

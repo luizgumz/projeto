@@ -27,3 +27,6 @@ Estrutura sugerida:
 -O projeto deve ter no mínimo 5 arquivos PHP.
 -Utilizar bootstrap para deixar o site mais responsivo e visualmente agradável.
 
+Credenciais login.php
+    login: admin
+    senha: senha123
