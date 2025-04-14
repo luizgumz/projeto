@@ -1,10 +1,12 @@
 <?php
     //Pagina inicial com exibição do catálogo
 
+    /* Include para puxar os usuário, implementado dessa forma porque o php não estava reconhecendo outras pastas, então o server aponta para o root(raiz) antes de entrar na pasta do projeto*/
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
 
+    /*puxa dos dados do json e decodifica para que o php entenda */
     $dadosJson = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/projeto/data/itens.json');
-        $tudo_musica = json_decode($dadosJson, true);
+    $tudo_musica = json_decode($dadosJson, true);
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +27,7 @@
         <br>
         <br>
         <div class="row">
-
+            <!-- Pega os itens do itens.json, percorre o vetor mostrando para o usuário com o tratamento do html+css -->
             <?php foreach ($tudo_musica as $item): ?>
             <div class="col-md-4 mb-4">
                 <div class="card">

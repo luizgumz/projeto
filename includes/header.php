@@ -1,3 +1,4 @@
+<!-- Header do projeto usado em todas as páginas -->
 <header>
     <div class="musical-notes">
         <span>🎵</span>

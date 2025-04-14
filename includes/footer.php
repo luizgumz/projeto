@@ -1,3 +1,4 @@
+<!-- Footer do projeto usado em todas as páginas -->
 <footer>
     <div class="footer-notes">
         <span>🎶</span>

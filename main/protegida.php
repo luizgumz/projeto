@@ -1,15 +1,17 @@
 <?php
     //Area administrativa
     session_start();
+
+    /* Include para puxar os usuário, implementado dessa forma porque o php não estava reconhecendo outras pastas, então o server aponta para o root(raiz) antes de entrar na pasta do projeto*/
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
 
-
-
+    //Mais uma verificação para ver se o usuário tá logado, importante por causa da expiração depois de 1 hora
     if (!$_SESSION['logado']) {
         header("Location: login.php");
         exit;
     }
 
+    /* Ao receber os seguintes dados do formulário e armazenalos nas variáveis a baixo o sistema vai armazenálos no itens.json com um novo id e então enviará um feedback visual ao usuário */
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $titulo = $_POST["titulo"];
         $autor = $_POST["autor"];
