@@ -8,6 +8,9 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s ease-in-out;
 }
+.row {
+    display: flex;
+ }
 
 .card:hover {
     transform: scale(1.02);
@@ -25,4 +28,18 @@ body {
 footer {
     padding: 10px;
     text-align: center;
+}
+
+
+.imagem-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.imagem-container img {
+  max-width: 200px;
+  height: auto;
+  display: block;
 }
