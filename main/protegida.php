@@ -1,13 +1,54 @@
 <?php
     //Area administrativa
     session_start();
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/usuarios.php';
+
+
 
     if (!$_SESSION['logado']) {
         header("Location: login.php");
         exit;
     }
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        $titulo = $_POST["titulo"];
+        $autor = $_POST["autor"];
+        $categoria = $_POST["categoria"];
+        $idioma = $_POST["idioma"];
+        $descricao = $_POST["descricao"];
+        $imagem = $_POST["url"];
+
+        $jsonPath = $_SERVER['DOCUMENT_ROOT'] . '/projeto/data/itens.json';
+
+            $dadosJson = file_get_contents($jsonPath);
+            $musicas = json_decode($dadosJson, true);
+
+            $novoId = count($musicas) + 1;
+
+            $novaMusica = [
+                'id' => $novoId,
+                'titulo' => $titulo,
+                'autor' => $autor,
+                'categoria' => $categoria,
+                'idioma' => $idioma,
+                'descricao' => $descricao,
+                'imagem' => $imagem,
+            ];
+
+            $musicas[] = $novaMusica;
+
+            $salvo = file_put_contents($jsonPath, json_encode($musicas, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+
+            if (!$salvo) {
+                $resposta = "Erro ao cadastrar.";
+            } else {
+                $resposta = "Cadastrado com sucesso!";
+            }
+
+    }
+
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -29,30 +70,30 @@
         <h2>Bem-vindo, <strong>Admin!</strong></h2>
 
         <!-- Tomar cuido com Enctyme -->
-        <form method="POST" action="criar_item.php" enctype="multipart/form-data">
+        <form method="POST" action="protegida.php">
             <div>
                 <h3>Título</h3>
-                <input name="titulo" class="form-control mb-2" placeholder="Título">
+                <input name="titulo" class="form-control mb-2" placeholder="Título" required>
             </div> 
             <div>
                 <h3>Autor</h3>   
-                <input name="autor" class="form-control mb-2" placeholder="Autor">
+                <input name="autor" class="form-control mb-2" placeholder="Autor" required>
             </div>
             <div>
                 <h3>Categoria</h3>
-                <input name="categoria" class="form-control mb-2" placeholder="Categoria">
+                <input name="categoria" class="form-control mb-2" placeholder="Categoria" required>
             </div>
             <div>
                 <h3>Idioma</h3>
-                <input name="idioma" class="form-control mb-2" placeholder="Idioma">
+                <input name="idioma" class="form-control mb-2" placeholder="Idioma" required>
             </div>
             <div>
                 <h3>Descrição</h3>
-                <textarea name="descricao" class="form-control mb-2" placeholder="Descrição"></textarea>
+                <textarea name="descricao" class="form-control mb-2" placeholder="Descrição" required></textarea>
             </div>
             <div>
                 <h3>Imagem</h3>
-                <input type="file" name="imagem" class="form-control mb-2">
+                <input type="text" name="url" class="form-control mb-2" required>
             </div>
             <div>
                 <br>

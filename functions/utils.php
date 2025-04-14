@@ -6,7 +6,7 @@
     function filtrarItens($itens, $filtros) {
         return array_filter($itens, function ($item) use ($filtros) {
             foreach ($filtros as $chave => $valor) {
-                if (!empty($valor) && stripos($item[$chave], $valor) === false) {
+                if (!empty($valor) && stripos(strtolower($item[$chave]) , strtolower($valor)) === false) {
                     return false;
                 }
             }

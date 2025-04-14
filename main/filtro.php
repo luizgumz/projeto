@@ -1,12 +1,14 @@
 <?php
     //Pagina com formulario de filtro(GET)
-    
-   
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
 
+    $dadosJson = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/projeto/data/itens.json');
+        $tudo_musica = json_decode($dadosJson, true);
+
+    
+
     $filtros = $_GET;
-    $resultado = filtrarItens($itens, $filtros);
+    $filtro_musica = filtrarItens($tudo_musica, $filtros);
 ?>
 
 <!DOCTYPE html>
@@ -20,27 +22,42 @@
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
+    <br> 
+    <br>
     <form method="GET" class="container mt-4">
-        <input type="text" name="titulo" placeholder="Título" class="form-control mb-2">
-        <input type="text" name="autor" placeholder="Autor" class="form-control mb-2">
-        <input type="text" name="categoria" placeholder="Categoria" class="form-control mb-2">
-        <input type="text" name="idioma" placeholder="Idioma" class="form-control mb-2">
-        <button class="btn btn-success">Filtrar</button>
+        <div>
+            <h3>Título</h3>
+            <input type="text" name="titulo" placeholder="Título" class="form-control mb-2">
+        </div>
+        <div>
+            <h3>Autor</h3>
+            <input type="text" name="autor" placeholder="Autor" class="form-control mb-2">
+        </div>
+        <div>
+            <h3>Categoria</h3>
+            <input type="text" name="categoria" placeholder="Categoria" class="form-control mb-2">
+        </div>
+        </div>
+            <h3>Idioma</h3>
+            <input type="text" name="idioma" placeholder="Idioma" class="form-control mb-2">
+        </div>
+        <div>
+            <br>
+            <button class="btn btn-success">Filtrar</button>
+        </div>
     </form>
 
     <div class="container mt-4">
-        <?php foreach ($resultado as $item): ?>
+        <br>
+        <?php foreach ($filtro_musica as $item): ?>
             <div>
                 <a href="detalhes.php?id=<?= $item['id'] ?>"><?= $item['titulo'] ?> - <?= $item['autor'] ?></a>
             </div>
         <?php endforeach ?>
     </div>
 
-    <?php include 'includes/footer.php'; ?>
-</body>
-<footer>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/footer.php'; ?>
-</footer>
+</body>
 </html>
 
 

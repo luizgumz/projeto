@@ -1,11 +1,13 @@
 <?php
     //Pagina com detalhes de um item (GET ID)
 
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
 
+    $dadosJson = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/projeto/data/itens.json');
+        $tudo_musica = json_decode($dadosJson, true);
+
     $id = $_GET['id'] ?? 0;
-    $item = buscarItemPorId($id, $itens);
+    $item = buscarItemPorId($id, $tudo_musica);
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +22,14 @@
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
     <div class="container mt-5">
+        <br>
         <?php if ($item): ?>
-            <h2><?= $item['titulo'] ?></h2>
+            <h1><?= $item['titulo'] ?></h1>
+            <br>
             <img src="<?= $item['imagem'] ?>" class="img-fluid mb-3" alt="<?= $item['titulo'] ?>">
-            <p><strong>Autor:</strong> <?= $item['autor'] ?></p>
-            <p><strong>Categoria:</strong> <?= $item['categoria'] ?></p>
-            <p><strong>Idioma:</strong> <?= $item['idioma'] ?></p>
+            <p><strong>Autor: </strong> <?= $item['autor'] ?></p>
+            <p><strong>Categoria: </strong> <?= $item['categoria'] ?></p>
+            <p><strong>Idioma: </strong> <?= $item['idioma'] ?></p>
             <p><?= $item['descricao'] ?></p>
         <?php else: ?>
             <p>Item não encontrado.</p>

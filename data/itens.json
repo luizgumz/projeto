@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "titulo": "In the end",
+        "categoria": "Rap-rock",
+        "autor": "Linking Park",
+        "idioma": "Ingl\u00eas",
+        "imagem": "https://i.scdn.co/image/ab67616d0000b2736741ca6e9ba6fdc166037321",
+        "descricao": "In the End \u00e9 uma m\u00fasica estadunidense da banda de Neo-Metal Linkin Park. Foi o quarto e \u00faltimo Single do \u00e1lbum Hybrid Theory de 9 de outubro de 2001 por Warner Bros."
+    },
+    {
+        "id": 2,
+        "titulo": "\u0433\u0440\u0443\u043f\u043f\u0430 \u043a\u0440\u043e\u0432\u0438(gruppa krovi)",
+        "categoria": "Post punk",
+        "autor": "Kino",
+        "idioma": "Russo",
+        "imagem": "https://i.scdn.co/image/ab67616d0000b2736be16ce032a4c657689c98ee",
+        "descricao": "Sir\u00edlic: \u0413\u0440\u0443\u043f\u043f\u0430 \u043a\u0440\u043e\u0432\u0438, transcrit: Gruppa krovi, Portugu\u00ea: T\u00edpo sangu\u00ednio) \u00e9 a capa do \u00e1lbum do sexto disco da banda de post-punk sovi\u00e9tico Kino(cinema), lan\u00e7ado em 5 de janeiro de 1988. Comummente dentre as 100 m\u00fasicas russas mais ouvidas."
+    },
+    {
+        "id": 3,
+        "titulo": "Ragio ga ga",
+        "categoria": "Rock Classico",
+        "autor": "Queen",
+        "idioma": "Ingl\u00eas",
+        "imagem": "https://i.scdn.co/image/ab67616d0000b273dc386376636cb6b383221fd8",
+        "descricao": "A m\u00fasica foi um sucesso mundial, alcan\u00e7ando o primeiro lugar em 19 pa\u00edses, o segundo lugar no UK Singles Chart e a 16\u00aa posi\u00e7\u00e3o na Billboard Hot 100 dos Estados Unidos."
+    },
+    {
+        "id": 4,
+        "titulo": "Der letzte Tanz",
+        "categoria": "Pop alem\u00e3o",
+        "autor": "Bosse",
+        "idioma": "Alem\u00e3o",
+        "imagem": "https://i.scdn.co/image/ab67616d0000b2738ccbc00dc1cdcdb567c6bd04",
+        "descricao": "A m\u00fasica escrita em 2021, por Bosse, foi um sucesso nas r\u00e1dios alem\u00e3s at\u00e9 o final de 2024, ficando no top 30."
+    },
+    {
+        "id": 5,
+        "titulo": "It\u00b4s my life",
+        "categoria": "Pop Rock",
+        "autor": "Bon Jovi",
+        "idioma": "Ingl\u00eas",
+        "imagem": "https://i.scdn.co/image/ab67616d0000b2737a231174875d7930de9dad58",
+        "descricao": "A m\u00fasica \u00b4\u00b4It\u00b4s my life\u00b4 tem muitasThe song 'It\u00b4s My Life' has many classic Bon Jovi features, such as Richie Sambora\u00b4s use of the talk box, and a line in the second verse \u00b4\u00b4For Tommy and Gina, who never backed down\u00b4\u00b4 refers to Tommy and Gina, a fictional working class couple that Bon Jovi and Sambora first wrote about in their 1986 hit \u00b4\u00b4Livin\u00b4 on a Prayer."
+    }
+]

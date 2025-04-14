@@ -10,7 +10,11 @@ body {
 }
 .row {
     display: flex;
-
+    gap: 2rem;
+    flex-wrap: wrap;
+ }
+ img {
+    width: 350px;
  }
 
 .card:hover {

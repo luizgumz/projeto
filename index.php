@@ -1,9 +1,10 @@
 <?php
     //Pagina inicial com exibição do catálogo
 
-
-    include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
+
+    $dadosJson = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/projeto/data/itens.json');
+        $tudo_musica = json_decode($dadosJson, true);
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +22,11 @@
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
     <div class="container mt-5">
+        <br>
+        <br>
         <div class="row">
 
-            <?php foreach ($itens as $item): ?>
+            <?php foreach ($tudo_musica as $item): ?>
             <div class="col-md-4 mb-4">
                 <div class="card">
 
