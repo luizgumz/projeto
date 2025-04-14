@@ -16,21 +16,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musicas/<?php $item['titulo'] ?></title>
+    <link rel="stylesheet" href="/projeto/main/style_detalhes.css">
     <link rel="stylesheet" href="/projeto/includes/header.css">
     <link rel="stylesheet" href="/projeto/includes/footer.css">
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
-    <div class="container mt-5">
+    <div class="container-mt-5">
         <br>
         <?php if ($item): ?>
             <h1><?= $item['titulo'] ?></h1>
             <br>
-            <img src="<?= $item['imagem'] ?>" class="img-fluid mb-3" alt="<?= $item['titulo'] ?>">
-            <p><strong>Autor: </strong> <?= $item['autor'] ?></p>
-            <p><strong>Categoria: </strong> <?= $item['categoria'] ?></p>
-            <p><strong>Idioma: </strong> <?= $item['idioma'] ?></p>
-            <p><?= $item['descricao'] ?></p>
+            <img src="<?= $item['imagem'] ?>" class="img-fluid-mb-3" alt="<?= $item['titulo'] ?>">
+            <h3><strong>Autor: </strong> <?= $item['autor'] ?></h3>
+            <h3><strong>Categoria: </strong> <?= $item['categoria'] ?></h3>
+            <h3><strong>Idioma: </strong> <?= $item['idioma'] ?></h3>
+            <h3><?= $item['descricao'] ?></h3>
         <?php else: ?>
             <p>Item não encontrado.</p>
         <?php endif ?>

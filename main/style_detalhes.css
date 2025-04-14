@@ -1,0 +1,11 @@
+.container-mt-5 {
+    gap: 5rem;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.img-fluid-mb-3 {
+    max-width: 500px;
+    height: auto;
+    display: block;
+}

@@ -34,7 +34,7 @@
                         <img src="<?= $item['imagem'] ?>" class="card-img-top" alt="<?= $item['titulo'] ?>">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><?= $item['titulo'] ?></h5>
+                        <h3 class="card-title"><?= $item['titulo'] ?></h3>
                         <p class="card-text"><?= $item['categoria'] ?></p>
                         <a href="/projeto/main/detalhes.php?id=<?= $item['id'] ?>" class="btn btn-primary">Ver mais</a>
                     </div>
