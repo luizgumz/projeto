@@ -1,0 +1,31 @@
+Lista de músicas ou álbuns favoritos
+Palavras chave:
+
+
+Categoria: Catálogo online dinâmico
+
+Funções:
+-Deve permitir que o usuário visualize os itens cadastrados
+-Deve permitir que o usuário filtre por Nome, Categorias, idioma, autor, etc.
+-Deve ter uma área restrita pode credenciais de login e senha que onde pode-se cadastrar itens, deletar itens e fazer manutenção de algum item já cadastrado;
+
+-Uma página home que mostre os itens do catálogo percorrendo um array e exibindo cada item com imagem, título e categoria. Cada item deve conter um botão "Ver mais" que leve à página com detalhes passando por um identificador via GET.
+
+-Uma página de detalhes(detalhes.php) que exiba as informações completas sobre o item clicado.
+
+-Uma página de filtro(filtro.php) com formulário GET que permita filtrar por categoria, nome, tipo, autor, idioma, etc.
+
+-Uma página de login(login.php) com formulário POST validando nome de usuário e senha fixos(Armazenados com hash) Se os dados forem válidos sessão iniciada e volta para home. se não exibir erro: Usuário ou senha inválidos.
+
+-Uma página protegida(protegida.php) acessível apenas por usuários admin.
+
+-Dentro da página protegida o usuário adm deve ter poder de criar um novo item via formulário POST, assim como deletar e fazer manutenção.
+Este item deve estar no index imediatamente após a criação.
+
+Estrutura sugerida:
+-Criar um arquivo com os dados (array) dos itens;
+-Criar um arquivo com funções auxiliares( ex: formatar, texto, filtrar dados, etc.);
+-Utilizar includes para cabeçalho, rodapé e outras partes comuns;
+-O projeto deve ter no mínimo 5 arquivos PHP.
+-Utilizar bootstrap para deixar o site mais responsivo e visualmente agradável.
+

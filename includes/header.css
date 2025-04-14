@@ -1,0 +1,41 @@
+
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: #fff;
+    padding-top: 80px; /* espaço para header fixa */
+    overflow-x: hidden; /* tira rolagem horizontal */
+  }
+  
+  /* HEADER ESTILIZADA */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1a1a1a, #3a1c71, #0f2027);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* LINKS DO MENU */
+  header a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header a:hover {
+    background-color: #ffffff22;
+    color: #ff66cc;
+  }
+  
