@@ -22,7 +22,10 @@
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
     <div class="container mt-5">
-        <h3>Administração</h3>
+        <div>
+            <br>
+            <h3>Administração</h3>
+        </div>
         <h2>Bem-vindo, <strong>Admin!</strong></h2>
 
         <!-- Tomar cuido com Enctyme -->
