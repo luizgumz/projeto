@@ -36,8 +36,8 @@
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
     <form method="POST" class="container mt-5">
         <h3>Login</h3>
-        <?php if ($erro): ?>
-            <p class="text-danger"><?= $erro ?></p> <!-- MUDAR DEPOIS NO CSS PARA VERMELHO -->
+        <?php if (isset($_GET['erro'])): ?>
+            <p style="color:red;">Usuário ou senha inválidos. Tente novamente!</p>
         <?php endif; ?>
         <div>
             <input name="usuario" class="form-control mb-2" placeholder="Usuário">
