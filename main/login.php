@@ -34,21 +34,23 @@
 </head>
 <body>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/header.php'; ?>
-    <form method="POST" class="container mt-5">
+    <form action="/projeto/functions/valida_login.php" method="POST" class="container mt-5">
         <h3>Login</h3>
-        <?php if (isset($_GET['erro'])): ?>
-            <p style="color:red;">Usuário ou senha inválidos. Tente novamente!</p>
-        <?php endif; ?>
+        
         <div>
-            <input name="usuario" class="form-control mb-2" placeholder="Usuário">
+            <input type="text" name="usuario" required placeholder="Usuário"><br>
         </div>
         <div>
-            <input name="senha" type="password" class="form-control mb-2" placeholder="Senha">
+            <input type="password" name="senha" required placeholder="Senha"><br>
         </div>
         <div>
-            <button class="btn btn-primary">Login</button>
+            <button type="submit">Entrar</button>
         </div>
     </form>
+
+    <?php if (isset($_GET['erro'])): ?>
+            <p style="color:red;">Usuário ou senha inválidos. Tente novamente!</p>
+    <?php endif; ?>
 </body>
 <footer>
     <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/footer.php'; ?>
