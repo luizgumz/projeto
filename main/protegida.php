@@ -40,8 +40,11 @@
         
     </div>
 </body>
+<footer>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/includes/footer.php'; ?>
+</footer>
 </html>
 
 
 
-<?php include 'includes/footer.php'; ?>
+
