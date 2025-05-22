@@ -1,6 +1,5 @@
 <?php
     //Pagina com detalhes de um item (GET ID)
-
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
 

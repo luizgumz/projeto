@@ -1,7 +1,5 @@
 <?php
     //Pagina com formulario de filtro(GET)
-    
-   
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/data/itens.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/projeto/functions/utils.php';
 
